@@ -1,0 +1,27 @@
+.Card {
+    background-color: red;
+    height: 340px;
+    width: 340px;
+    flex-direction: column;
+    display: flex;
+    justify-content: end;
+    border-radius: 10px;
+}
+.house-cards {
+    width: 100%;
+    height: 830px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:50px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+
+}
+.rental-location {
+    color: white;
+    position: absolute;
+
+    
+}

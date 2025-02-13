@@ -1,0 +1,34 @@
+.landscape-banner {
+   background-image: url("../assets/Image source 1.png");
+   background-size: cover ;
+   height: 223px;
+   width: 1240px;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   opacity: 60%;
+   border-radius: 25px;
+   background-color: white;
+   box-shadow: 0,4,4,0;
+   margin-bottom: 40px;
+  
+}
+
+
+.landscape-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; 
+    font-size: 30px
+}
+
+.landscape-title {
+    font-size:48px ;
+    font-family: 'Montserrat';
+    font-weight: 700;
+   
+}
