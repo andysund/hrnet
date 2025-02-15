@@ -1,0 +1,29 @@
+/* TopNavBar.css */
+
+.Topnavbar {
+    display: flex;
+    align-items: center;        /* Centre verticalement */
+    justify-content: space-between; /* Logo à gauche, liens à droite */
+    padding: 0 2rem;           /* Un peu de marge sur les côtés */
+  }
+  
+  .Topnavbar__logo img {
+    max-height: 40px;          /* Ajuste la taille du logo si besoin */
+  }
+  
+  /* Le conteneur des liens */
+  .Topnavbar__links {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;                 /* Espace entre chaque lien */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style des liens (optionnel) */
+  .nav-link {
+    text-decoration: none;
+    color: #000;              /* Couleur du texte */
+    font-weight: 500;         /* Par exemple */
+  }
+  
