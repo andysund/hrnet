@@ -9,6 +9,7 @@
   
   .Topnavbar__logo img {
     max-height: 40px;          /* Ajuste la taille du logo si besoin */
+    max-width: 178px;
   }
   
   /* Le conteneur des liens */
@@ -18,6 +19,8 @@
     gap: 2rem;                 /* Espace entre chaque lien */
     margin: 0;
     padding: 0;
+    width: 695px;
+    justify-content: space-between;
   }
   
   /* Style des liens (optionnel) */

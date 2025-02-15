@@ -1,0 +1,16 @@
+.Sidenavbar {
+    display: flex;
+    flex-direction: column;
+    height: 933px;
+    width: 91px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.Sidenavbar__links {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+  
+}
