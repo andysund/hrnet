@@ -1,5 +1,5 @@
 import '../styles/TopNavBar.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' 
 import SportSeeLogo from '../assets/SportSeeLogo.png'
 
 function TopNavBar() {
