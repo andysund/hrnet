@@ -1,4 +1,4 @@
-import TopNavBar from "../components/TopNavBar";
+import TopNavBar from "../elements/TopNavBar";
 function Communaute() {
   return (
   <>

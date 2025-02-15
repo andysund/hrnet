@@ -1,0 +1,14 @@
+.keydata-container {
+    display: flex;
+    flex-direction: column;
+}
+.keydata__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.keydata__info {
+    display: flex;
+    flex-direction: column;
+}
