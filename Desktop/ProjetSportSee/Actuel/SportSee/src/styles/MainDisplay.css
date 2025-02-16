@@ -1,3 +1,10 @@
 .MainDisplay {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.AllData {
+    display: flex;
+    flex-direction: column;
 }
