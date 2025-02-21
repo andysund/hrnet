@@ -1,0 +1,80 @@
+/* Fond de la page en plein écran */
+.signin-page {
+    /* Si tu veux un fond uni : */
+    background-color: #060031; /* Par exemple un violet très sombre */
+    
+    /* Si tu veux un fond image :
+       background: url("/path/to/image.jpg") no-repeat center center fixed;
+       background-size: cover;
+    */
+  
+    width: 100%;
+    height: 100vh; /* prend toute la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center; /* centre horizontalement le formulaire */
+    align-items: center;     /* centre verticalement le formulaire */
+    margin: 0;              /* enlève les marges par défaut du body si besoin */
+  }
+  
+  /* Style du formulaire */
+  .signin-form {
+    background-color: #111; /* Couleur de fond du formulaire */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    width: 300px; /* Largeur fixe ou adaptative selon tes préférences */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* petit effet d'ombre */
+  }
+  
+  .signin-title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .input-wrapper {
+    margin-bottom: 1rem;
+  }
+  
+  .input-wrapper label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+  }
+  
+  .input-wrapper input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #444;
+    border-radius: 0.25rem;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* Zone "Remember me" */
+  .input-remember {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .input-remember input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  /* Bouton de connexion */
+  .signin-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #00bc77; /* couleur "verte" style ArgentBank */
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .signin-button:hover {
+    background-color: #00a065; /* un peu plus sombre au survol */
+  }
+  
