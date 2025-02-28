@@ -1,0 +1,28 @@
+.app-container {
+    padding: 20px;
+  }
+  
+  .selectmenu-container {
+    margin-bottom: 20px;
+  }
+  
+  .selectmenu-button {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .selectmenu-button:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+  }
+  
+  .selectmenu-menu {
+    border-radius: 4px;
+  }
+  
+  .selectmenu-option.focused {
+    background: grey;
+  }
+  

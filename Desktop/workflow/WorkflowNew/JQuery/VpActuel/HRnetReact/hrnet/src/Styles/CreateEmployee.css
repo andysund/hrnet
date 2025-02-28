@@ -1,0 +1,76 @@
+.container {
+    max-width: 1200px; /* Vous pouvez ajuster cette largeur */
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #create-employee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  .personal-info {
+    width: 80%;
+    padding: 20px;
+    margin-bottom: 20px;
+   
+    border-radius: 4px;
+  }
+  .addressAndDepartment {
+    display: flex;
+    align-items: center;
+  }
+  .row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .input-group {
+    flex: 1; /* Chaque groupe prend la même largeur */
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  
+  .address {
+    /* Agrandir la largeur de la box adresse */
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .addressAndDepartment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 20%;
+  }
+  #department {
+    background-color: gray;
+  }
+
+  .selectmenu-button {
+    background-color: gray;
+  }
+  .selectmenu-option {
+    background-color: gray;
+  }
+  .address .input-group {
+    margin-bottom: 10px;
+  }
+  
+  /* Vous pouvez ajouter d'autres styles pour les labels, inputs, etc. */
+  
