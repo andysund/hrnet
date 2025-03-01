@@ -1,13 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setDepartment } from '../features/departementSlice';
 import '../Styles/SelectMenu.css';
 
+const SelectMenu = ({ options, disabled = false, width }) => {
+  const dispatch = useDispatch();
+  // Récupère la valeur sélectionnée depuis Redux
+  const value = useSelector((state) => state.department.value);
 
-const SelectMenu = ({ options, value, onChange, disabled = false, width }) => {
+  // États locaux pour le menu déroulant
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const containerRef = useRef(null);
 
-  // Trouver l'index de l'option sélectionnée
+  // Trouver l'index de l'option sélectionnée dans la liste
   const selectedIndex = options.findIndex(option => option.value === value);
 
   // Ouvre ou ferme le menu
@@ -15,15 +21,15 @@ const SelectMenu = ({ options, value, onChange, disabled = false, width }) => {
     if (disabled) return;
     setIsOpen(prev => !prev);
     if (!isOpen) {
-      // Lorsque le menu s'ouvre, placer le focus sur l'option sélectionnée ou sur la première option
+      // Au moment de l'ouverture, placer le focus sur l'option sélectionnée ou la première
       setFocusedIndex(selectedIndex >= 0 ? selectedIndex : 0);
     }
   };
 
-  // Sélectionne une option
+  // Sélectionne une option et met à jour l'état global via Redux
   const selectOption = (index) => {
     if (options[index] && !options[index].disabled) {
-      onChange(options[index].value);
+      dispatch(setDepartment(options[index].value));
       setIsOpen(false);
       setFocusedIndex(index);
     }
@@ -32,7 +38,6 @@ const SelectMenu = ({ options, value, onChange, disabled = false, width }) => {
   // Gestion de la navigation clavier
   const handleKeyDown = (e) => {
     if (!isOpen) {
-      // Ouvre le menu avec flèche ou espace
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === ' ') {
         e.preventDefault();
         setIsOpen(true);
@@ -74,7 +79,7 @@ const SelectMenu = ({ options, value, onChange, disabled = false, width }) => {
     }
   };
 
-  // Ferme le menu si clic en dehors
+  // Ferme le menu en cas de clic en dehors du composant
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (containerRef.current && !containerRef.current.contains(event.target)) {
@@ -97,7 +102,7 @@ const SelectMenu = ({ options, value, onChange, disabled = false, width }) => {
     >
       <label htmlFor="department">Department</label>
       <button
-      id='department'
+        id='department'
         type="button"
         className="selectmenu-button"
         aria-haspopup="listbox"
@@ -155,7 +160,6 @@ const SelectMenu = ({ options, value, onChange, disabled = false, width }) => {
               style={{
                 padding: '8px 12px',
                 cursor: option.disabled ? 'not-allowed' : 'pointer',
-              
               }}
             >
               {option.label}
